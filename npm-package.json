@@ -4,7 +4,11 @@
   "description": "A wrapper for eth2 apis",
   "author": "ChainSafe Systems",
   "license": "Apache-2.0",
-  "main": "./generated-typescript/api.ts",
+  "main": "/generated-typescript/api.ts",
+  "files": [
+    "./generated-typescript"
+  ],
+  "private": false,
   "scripts": {},
   "repository": {
     "type": "git",
@@ -13,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/ChainSafe/eth2.0-APIs/issues"
   },
-  "homepage": "https://github.com/ChainSafe/eth2.0-APIs#readme"
+  "homepage": "https://github.com/ChainSafe/eth2.0-APIs#readme",
+  "dependencies": {}
 }
