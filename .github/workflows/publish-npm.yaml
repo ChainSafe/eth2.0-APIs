@@ -16,9 +16,9 @@ jobs:
         command: "bundle ./beacon-node-oapi.yaml -r -t json -o ./beacon-node-oapi.json"
     - name: Generate TypeScript
       run: npx @openapitools/openapi-generator-cli generate -i ./beacon-node-oapi.json -g typescript-node -o ./generated-typescript
+    - run: mv npm-package.json package.json
     - name: Publish if version has been updated
       uses: JS-DevTools/npm-publish@v1 
       with: # All of theses inputs are optional
         token: ${{ secrets.NPM_TOKEN }}
         dry-run: true
-        package: ./npm-package.json
