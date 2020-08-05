@@ -9,7 +9,9 @@
     "./generated-typescript"
   ],
   "private": false,
-  "scripts": {},
+  "scripts": {
+    "tsc": "tsc -b tsconfig.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChainSafe/eth2.0-APIs.git"
@@ -18,5 +20,7 @@
     "url": "https://github.com/ChainSafe/eth2.0-APIs/issues"
   },
   "homepage": "https://github.com/ChainSafe/eth2.0-APIs#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
 }
