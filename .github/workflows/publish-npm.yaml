@@ -14,9 +14,10 @@ jobs:
     - uses: mpetrunic/swagger-cli-action@v1.0.0
       with:
         command: "bundle ./beacon-node-oapi.yaml -r -t json -o ./beacon-node-oapi.json"
-    - name: Generate TypeScript
-      run: npx @openapitools/openapi-generator-cli generate -i ./beacon-node-oapi.json -g typescript-node -o ./generated-typescript
     - run: mv npm-package.json package.json
+    - run: npm install
+    - run: npx @openapitools/openapi-generator-cli generate -i ./beacon-node-oapi.json -g typescript-node -o ./generated-typescript
+    - run: npm run tsc
     - name: Publish if version has been updated
       uses: JS-DevTools/npm-publish@v1 
       with: # All of theses inputs are optional
