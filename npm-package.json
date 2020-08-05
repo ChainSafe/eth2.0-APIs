@@ -1,6 +1,6 @@
 {
   "name": "@chainsafe/eth2.0-api-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A wrapper for eth2 apis",
   "author": "ChainSafe Systems",
   "license": "Apache-2.0",
